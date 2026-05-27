@@ -10,19 +10,22 @@
   
   <style>
     body, html { 
-      margin: 0; padding: 0; height: 100%; width: 100%; 
-      overflow: hidden; background-color: #000; 
+      margin: 0; 
+      padding: 0; 
+      height: 100%; 
+      width: 100%; 
+      overflow: hidden; 
+      background-color: #000; 
     }
     iframe { 
       position: fixed;
       top: 0;
       left: 0;
+      right: 0;    /* додано */
+      bottom: 0;   /* додано */
       width: 100%;
-      height: 100vh; /* Примусово 100% висоти екрана */
+      height: 100%; /* заповнює доступну область */
       border: none;
-      /* Додаємо невеликий зсув вниз, якщо потрібно перекрити системні елементи */
-      margin-top: 0; 
-      padding-bottom: 0;
     }
   </style>
 </head>
