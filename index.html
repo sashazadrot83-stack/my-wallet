@@ -10,27 +10,21 @@
   <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png">
   <title>Гаманець 💰</title>
   
-  <style>
-    /* Примусово прибираємо будь-які відступи */
-    html, body { 
-      margin: 0; 
-      padding: 0; 
-      width: 100%; 
-      height: 100%; 
-      background-color: #000000; 
-      overflow: hidden; 
-    }
-    
-    /* Iframe повинен займати всю площу, включаючи область під "чубчиком" */
-    iframe { 
-      width: 100vw; 
-      height: 100dvh; 
-      border: none; 
-      display: block;
-      /* Дозволяємо системі iOS правильно масштабувати контент всередині */
-      overflow: hidden;
-    }
-  </style>
+ <style>
+  html, body { 
+    margin: 0; padding: 0; width: 100%; height: 100%; 
+    background-color: #000000; overflow: hidden; 
+  }
+  iframe { 
+    width: 100%; 
+    height: 100vh; /* Використовуємо vh замість dvh для сумісності з ПК */
+    border: none; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
 </head>
 <body>
   <iframe 
