@@ -3,45 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Гаманець">
   
   <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png">
-  <link rel="shortcut icon" href="free-icon-wallet-3770811.png">
-  
   <title>Гаманець 💰</title>
   
   <style>
-    /* Прибираємо будь-які відступи та смужки */
+    /* Примусово прибираємо будь-які відступи */
     html, body { 
       margin: 0; 
       padding: 0; 
       width: 100%; 
       height: 100%; 
       background-color: #000000; 
-      overflow: hidden; /* Забороняємо прокрутку самого тіла */
+      overflow: hidden; 
     }
     
-    /* Iframe розтягуємо на весь екран з урахуванням безпечних зон iOS */
+    /* Iframe повинен займати всю площу, включаючи область під "чубчиком" */
     iframe { 
-      display: block; 
       width: 100vw; 
-      height: 100dvh; /* 100dvh — це динамічна висота, ідеально для Safari */
-      border: none;
-      margin: 0;
-      padding: 0;
+      height: 100dvh; 
+      border: none; 
+      display: block;
+      /* Дозволяємо системі iOS правильно масштабувати контент всередині */
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
-
   <iframe 
     src="https://script.google.com/macros/s/AKfycbygpncc98-av7bz2ts9Au0jSnAarXbpFRwabKZ2TRfgVPk5uixzclMGxTheNy_K7Zzt/exec" 
-    allow="geolocation; microphone; camera"
-    allowfullscreen>
+    allow="geolocation; microphone; camera; fullscreen"
+    scrolling="no">
   </iframe>
-
 </body>
 </html>
