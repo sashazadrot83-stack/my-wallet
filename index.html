@@ -7,37 +7,29 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Гаманець</title>
   
-  <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png?v=3">
+  <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png?v=5">
   <link rel="icon" type="image/png" href="free-icon-wallet-3770811.png">
   
  <style>
   html, body { 
-    margin: 0; 
-    padding: 0; 
-    /* Фіксуємо сам фон екрану */
-    position: fixed; 
-    width: 100%; 
-    height: 100%; 
-    background-color: #000000; /* Чорний колір під темну тему */
+    margin: 0; padding: 0; 
+    width: 100%; height: 100%; 
+    background-color: #F2F2F7; /* Світлий фон під світлу тему, щоб сховати полосу */
     overflow: hidden; 
   }
   
   iframe { 
-    border: none; 
-    position: absolute;
-    /* Прив'язуємо додаток до всіх 4-х країв екрана "намертво" */
-    top: 0; 
-    left: 0; 
-    right: 0; 
+    position: fixed;
+    /* Намертво прив'язуємо до низу */
     bottom: 0; 
+    left: 0; 
     width: 100%; 
     height: 100%;
-    /* Кажемо Айфону ігнорувати безпечні зони і заливати все */
-    padding-bottom: env(safe-area-inset-bottom);
+    border: none; 
   }
 </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbyW4kz8pj6t6i8PpcZcin45D5kqgZynv0oQzNerijgYcCVz1C_JLHkkv0IPalM7SKfq/exec" allow="fullscreen"></iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbz9mKkoeeMZ7thAK9IZVl1j8dsamSMYPAfBXT-zi9X73H6hu41Hr5Zrp0L6UzgGKi70/exec" allow="fullscreen"></iframe>
 </body>
-</html>
+</html> 
