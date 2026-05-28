@@ -5,36 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Гаманець">
+  <title>Гаманець</title>
   
-  <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png?v=2">
+  <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png?v=3">
   <link rel="icon" type="image/png" href="free-icon-wallet-3770811.png">
-  <title>Гаманець 💰</title>
   
  <style>
   html, body { 
-    margin: 0; padding: 0; width: 100%; height: 100dvh; 
-    /* Робимо фон чорним, щоб він зливався з темною темою */
-    background-color: #000000; 
-    overflow: hidden; 
-    -webkit-overflow-scrolling: touch; 
-  }
-  iframe { 
+    margin: 0; 
+    padding: 0; 
+    /* Фіксуємо сам фон екрану */
+    position: fixed; 
     width: 100%; 
-    height: 100dvh; 
+    height: 100%; 
+    background-color: #000000; /* Чорний колір під темну тему */
+    overflow: hidden; 
+  }
+  
+  iframe { 
     border: none; 
-    display: block;
     position: absolute;
-    /* КЛЮЧОВА ЗМІНА: Притискаємо додаток до самого низу екрана */
+    /* Прив'язуємо додаток до всіх 4-х країв екрана "намертво" */
+    top: 0; 
+    left: 0; 
+    right: 0; 
     bottom: 0; 
-    left: 0;
+    width: 100%; 
+    height: 100%;
+    /* Кажемо Айфону ігнорувати безпечні зони і заливати все */
+    padding-bottom: env(safe-area-inset-bottom);
   }
 </style>
 </head>
 <body>
-  <iframe 
-    src="https://script.google.com/macros/s/AKfycbyW4kz8pj6t6i8PpcZcin45D5kqgZynv0oQzNerijgYcCVz1C_JLHkkv0IPalM7SKfq/exec" 
-    allow="geolocation; microphone; camera; fullscreen">
-  </iframe>
+  <iframe src="https://script.google.com/macros/s/AKfycbyW4kz8pj6t6i8PpcZcin45D5kqgZynv0oQzNerijgYcCVz1C_JLHkkv0IPalM7SKfq/exec" allow="fullscreen"></iframe>
 </body>
 </html>
