@@ -14,10 +14,13 @@
   html, body { 
     margin: 0; padding: 0; width: 100%; height: 100%; 
     background-color: #000000; overflow: hidden; 
+    /* Додаємо плавну прокрутку для iOS, якщо вона знадобиться всередині */
+    -webkit-overflow-scrolling: touch; 
   }
   iframe { 
     width: 100%; 
-    height: 100vh; /* Використовуємо vh замість dvh для сумісності з ПК */
+    /* При position: absolute краще використовувати 100% замість 100vh, це стабільніше на Айфоні */
+    height: 100%; 
     border: none; 
     display: block;
     position: absolute;
@@ -30,7 +33,7 @@
   <iframe 
     src="https://script.google.com/macros/s/AKfycbzOLbCekIjILKCgm9uOIxYH5Shb5IMP5Zf7qrksw983Ysfrh6hlP-iQSzDT_5pBdcA0/exec" 
     allow="geolocation; microphone; camera; fullscreen"
-    scrolling="no">
+    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation">
   </iframe>
 </body>
 </html>
