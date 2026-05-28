@@ -5,24 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Гаманець 💰</title>
+  <meta name="apple-mobile-web-app-title" content="Гаманець">
   
   <link rel="apple-touch-icon" href="free-icon-wallet-3770811.png?v=2">
-  
   <link rel="icon" type="image/png" href="free-icon-wallet-3770811.png">
+  <title>Гаманець 💰</title>
+  
  <style>
   html, body { 
     margin: 0; padding: 0; width: 100%; height: 100dvh; 
-    /* Задаємо нейтральний колір, щоб знизу не було чорної дірки */
-    background-color: #F2F2F7; 
+    /* Робимо фон чорним, щоб він зливався з темною темою */
+    background-color: #000000; 
     overflow: hidden; 
+    -webkit-overflow-scrolling: touch; 
   }
   iframe { 
-    width: 100%; height: 100dvh; border: none; display: block; position: absolute; top: 0; left: 0;
+    width: 100%; 
+    height: 100dvh; 
+    border: none; 
+    display: block;
+    position: absolute;
+    /* КЛЮЧОВА ЗМІНА: Притискаємо додаток до самого низу екрана */
+    bottom: 0; 
+    left: 0;
   }
 </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbw2Y2TNKiwW4MMzG_10Egjsa5WeZAlDM0K_a1nlOjsG6ZbRRAL2ny0drXpS1vjdQX9V/exec" allow="fullscreen"></iframe>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbyJdt5ifJt34BLxJWK3VZYm4d78KuQ-V8_nhf3r0Mt160j0IXAc1FUdNvHYUR2tvIP8/exec" 
+    allow="geolocation; microphone; camera; fullscreen">
+  </iframe>
 </body>
 </html>
